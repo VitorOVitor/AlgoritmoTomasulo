@@ -2547,3 +2547,506 @@
 ```json
 [ 0, 0, 0, 0, 0, 0, 0, 0 ]
 ```
+# CICLO 1
+## Log
+* [1] Dispatched
+## Registradores
+```json
+[
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 2
+## Log
+* [2] Dispatched
+## Registradores
+```json
+[
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 3
+## Log
+* [3] Dispatched
+* [2] Started
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 4
+## Log
+* [3] Started
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+    {"id": 6, "busyByStation": 3, "busyByInst": 2, "v": 60},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 5
+## Log
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+    {"id": 6, "busyByStation": 3, "busyByInst": 2, "v": 60},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 6
+## Log
+* [3] Completed
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+    {"id": 6, "busyByStation": 3, "busyByInst": 2, "v": 60},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": 6,
+        "writtenAt": 7
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 7
+## Log
+* [3] Wrote to memory
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 8
+## Log
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 9
+## Log
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 10
+## Log
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 11
+## Log
+* [2] Completed
+## Registradores
+```json
+[
+    {"id": 4, "busyByStation": 2, "busyByInst": 1, "v": 40},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": 11,
+        "writtenAt": 12
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 12
+## Log
+* [1] Started
+* [2] Wrote to memory
+## Registradores
+```json
+[
+    {"id": 1, "busyByStation": 0, "busyByInst": 0, "v": 10},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 13
+## Log
+## Registradores
+```json
+[
+    {"id": 1, "busyByStation": 0, "busyByInst": 0, "v": 10},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 14
+## Log
+## Registradores
+```json
+[
+    {"id": 1, "busyByStation": 0, "busyByInst": 0, "v": 10},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 15
+## Log
+* [1] Completed
+## Registradores
+```json
+[
+    {"id": 1, "busyByStation": 0, "busyByInst": 0, "v": 10},
+]
+```
+## Estacoes
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 1,
+        "startedAt": 12,
+        "finishedAt": 15,
+        "writtenAt": 16
+    }},
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+# CICLO 16
+## Log
+* [1] Wrote to memory
+## Registradores
+```json
+[
+]
+```
+## Estacoes
+```json
+[
+]
+```
+
+## Memoria (primeiras 8 posicoes)
+```json
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
