@@ -1,0 +1,5075 @@
+# CICLE 1
+## Log
+* [1] Dispatched
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 2
+## Log
+* [2] Dispatched
+* [1] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 3
+## Log
+* [3] Dispatched
+* [2] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 4
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [3] Started
+* [1] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 14},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": 4,
+        "writtenAt": 5
+    }},
+]
+```
+---
+
+# CICLE 5
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Completed
+* [1] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 2},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": 5,
+        "writtenAt": 6
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 6
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Wrote in memory
+* [3] Completed
+
+## Registers
+```json
+[
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 19},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": 6,
+        "writtenAt": 7
+    }},
+]
+```
+---
+
+# CICLE 7
+## Log
+* [4] Dispatched
+* [3] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 8
+## Log
+* [5] Dispatched
+* [4] Started
+
+## Registers
+```json
+[
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 9
+## Log
+* [6] Dispatched
+* [5] Started
+
+## Registers
+```json
+[
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 10
+## Log
+* [7] Dispatched
+* [6] Started
+* [4] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 6},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": 10,
+        "writtenAt": 11
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 11
+## Log
+* [8] Dispatched
+* [7] Started
+* [4] Wrote in memory
+* [5] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 16},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": 11,
+        "writtenAt": 12
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 12
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [5] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 13
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 8},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": 13,
+        "writtenAt": 14
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 14
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 15
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 16
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 17
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 18
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 19
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": 19,
+        "writtenAt": 20
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 20
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Wrote in memory
+* [8] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 21
+## Log
+* [9] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 22
+## Log
+* [10] Dispatched
+* [9] Started
+* [8] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 8},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": 22,
+        "writtenAt": 23
+    }},
+]
+```
+---
+
+# CICLE 23
+## Log
+* [11] Dispatched
+* [10] Started
+* [8] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 24
+## Log
+* [12] Dispatched
+* [11] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 25
+## Log
+* [13] Dispatched
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 26
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Completed
+* [12] Cannot start, it's waiting for Register 2
+* [13] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 8},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": 26,
+        "writtenAt": 27
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 27
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Wrote in memory
+* [11] Completed
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": 27,
+        "writtenAt": 28
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 28
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [11] Wrote in memory
+* [12] Started
+* [13] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": 28,
+        "writtenAt": 29
+    }},
+]
+```
+---
+
+# CICLE 29
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [13] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 30
+## Log
+* [14] Dispatched
+* [9] Completed
+* [12] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 224},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 31
+## Log
+* [9] Wrote in memory
+* [12] Wrote in memory
+* [14] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 32
+## Log
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 33
+## Log
+* [14] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": 33,
+        "writtenAt": 34
+    }},
+]
+```
+---
+
+# CICLE 34
+## Log
+* [14] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+]
+```
+---
+
+# CICLE 1
+## Log
+* [1] Dispatched
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 2
+## Log
+* [2] Dispatched
+* [1] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 3
+## Log
+* [3] Dispatched
+* [2] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 4
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [3] Started
+* [1] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 14},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": 4,
+        "writtenAt": 5
+    }},
+]
+```
+---
+
+# CICLE 5
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Completed
+* [1] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 2},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": 5,
+        "writtenAt": 6
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 6
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Wrote in memory
+* [3] Completed
+
+## Registers
+```json
+[
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 19},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": 6,
+        "writtenAt": 7
+    }},
+]
+```
+---
+
+# CICLE 7
+## Log
+* [4] Dispatched
+* [3] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 8
+## Log
+* [5] Dispatched
+* [4] Started
+
+## Registers
+```json
+[
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 9
+## Log
+* [6] Dispatched
+* [5] Started
+
+## Registers
+```json
+[
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 10
+## Log
+* [7] Dispatched
+* [6] Started
+* [4] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 6},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": 10,
+        "writtenAt": 11
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 11
+## Log
+* [8] Dispatched
+* [7] Started
+* [4] Wrote in memory
+* [5] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 16},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": 11,
+        "writtenAt": 12
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 12
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [5] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 13
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 8},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": 13,
+        "writtenAt": 14
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 14
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 15
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 16
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 17
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 18
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 19
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": 19,
+        "writtenAt": 20
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 20
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Wrote in memory
+* [8] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 21
+## Log
+* [9] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 22
+## Log
+* [10] Dispatched
+* [9] Started
+* [8] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 8},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": 22,
+        "writtenAt": 23
+    }},
+]
+```
+---
+
+# CICLE 23
+## Log
+* [11] Dispatched
+* [10] Started
+* [8] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 24
+## Log
+* [12] Dispatched
+* [11] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 25
+## Log
+* [13] Dispatched
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 26
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Completed
+* [12] Cannot start, it's waiting for Register 2
+* [13] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 8},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": 26,
+        "writtenAt": 27
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 27
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Wrote in memory
+* [11] Completed
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": 27,
+        "writtenAt": 28
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 28
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [11] Wrote in memory
+* [12] Started
+* [13] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": 28,
+        "writtenAt": 29
+    }},
+]
+```
+---
+
+# CICLE 29
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [13] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 30
+## Log
+* [14] Dispatched
+* [9] Completed
+* [12] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 224},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 31
+## Log
+* [9] Wrote in memory
+* [12] Wrote in memory
+* [14] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 32
+## Log
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 33
+## Log
+* [14] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": 33,
+        "writtenAt": 34
+    }},
+]
+```
+---
+
+# CICLE 34
+## Log
+* [14] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+]
+```
+---
+
+# CICLE 1
+## Log
+* [1] Dispatched
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 2
+## Log
+* [2] Dispatched
+* [1] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 3
+## Log
+* [3] Dispatched
+* [2] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 10},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 4
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [3] Started
+* [1] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 1, "v": 14},
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 11},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": 4,
+        "writtenAt": 5
+    }},
+]
+```
+---
+
+# CICLE 5
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Completed
+* [1] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 11, "busyByStation": 3, "busyByInst": 2, "v": 2},
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 15},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 2,
+        "startedAt": 3,
+        "finishedAt": 5,
+        "writtenAt": 6
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 6
+## Log
+* [4] Cannot be dispatched, waiting for a station to be free
+* [2] Wrote in memory
+* [3] Completed
+
+## Registers
+```json
+[
+{"id": 15, "busyByStation": 4, "busyByInst": 3, "v": 19},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": 6,
+        "writtenAt": 7
+    }},
+]
+```
+---
+
+# CICLE 7
+## Log
+* [4] Dispatched
+* [3] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 8
+## Log
+* [5] Dispatched
+* [4] Started
+
+## Registers
+```json
+[
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 9
+## Log
+* [6] Dispatched
+* [5] Started
+
+## Registers
+```json
+[
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 30},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 10
+## Log
+* [7] Dispatched
+* [6] Started
+* [4] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 19},
+{"id": 30, "busyByStation": 3, "busyByInst": 4, "v": 6},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 7,
+        "startedAt": 8,
+        "finishedAt": 10,
+        "writtenAt": 11
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 11
+## Log
+* [8] Dispatched
+* [7] Started
+* [4] Wrote in memory
+* [5] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+{"id": 19, "busyByStation": 4, "busyByInst": 5, "v": 16},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (4)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 8,
+        "startedAt": 9,
+        "finishedAt": 11,
+        "writtenAt": 12
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 12
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [5] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 2},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 13
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 6, "v": 8},
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 9,
+        "startedAt": 10,
+        "finishedAt": 13,
+        "writtenAt": 14
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 14
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [6] Wrote in memory
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 15
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 16
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 17
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 18
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 14},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 19
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Completed
+* [8] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 2, "busyByInst": 7, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "DIV",
+        "issuedAt": 10,
+        "startedAt": 11,
+        "finishedAt": 19,
+        "writtenAt": 20
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 20
+## Log
+* [9] Cannot be dispatched, waiting for a station to be free
+* [7] Wrote in memory
+* [8] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 21
+## Log
+* [9] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 22
+## Log
+* [10] Dispatched
+* [9] Started
+* [8] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 8, "v": 8},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 11,
+        "startedAt": 20,
+        "finishedAt": 22,
+        "writtenAt": 23
+    }},
+]
+```
+---
+
+# CICLE 23
+## Log
+* [11] Dispatched
+* [10] Started
+* [8] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 24
+## Log
+* [12] Dispatched
+* [11] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 25
+## Log
+* [13] Dispatched
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 3},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 26
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Completed
+* [12] Cannot start, it's waiting for Register 2
+* [13] Started
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 8},
+{"id": 3, "busyByStation": 0, "busyByInst": 10, "v": 8},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 22,
+        "startedAt": 23,
+        "finishedAt": 26,
+        "writtenAt": 27
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 27
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [10] Wrote in memory
+* [11] Completed
+* [12] Cannot start, it's waiting for Register 2
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 1, "busyByInst": 11, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 7},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 23,
+        "startedAt": 24,
+        "finishedAt": 27,
+        "writtenAt": 28
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 28
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [11] Wrote in memory
+* [12] Started
+* [13] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 7, "busyByStation": 6, "busyByInst": 13, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 25,
+        "startedAt": 26,
+        "finishedAt": 28,
+        "writtenAt": 29
+    }},
+]
+```
+---
+
+# CICLE 29
+## Log
+* [14] Cannot be dispatched, waiting for a station to be free
+* [13] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 1},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 20},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 30
+## Log
+* [14] Dispatched
+* [9] Completed
+* [12] Completed
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 5, "busyByInst": 12, "v": 0},
+{"id": 20, "busyByStation": 2, "busyByInst": 9, "v": 224},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 21,
+        "startedAt": 22,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 24,
+        "startedAt": 28,
+        "finishedAt": 30,
+        "writtenAt": 31
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 31
+## Log
+* [15] Cannot be dispatched, waiting for a station to be free
+* [9] Wrote in memory
+* [12] Wrote in memory
+* [14] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 32
+## Log
+* [15] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 8},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 33
+## Log
+* [16] Cannot be dispatched, waiting for a station to be free
+* [15] Cannot start, it's waiting for Register 10
+* [14] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 14, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 30,
+        "startedAt": 31,
+        "finishedAt": 33,
+        "writtenAt": 34
+    }},
+]
+```
+---
+
+# CICLE 34
+## Log
+* [16] Cannot be dispatched, waiting for a station to be free
+* [15] Cannot start, it's waiting for Register 10
+* [14] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 35
+## Log
+* [16] Dispatched
+* [15] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 15, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": 35,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 36
+## Log
+* [17] Cannot be dispatched, waiting for a station to be free
+* [16] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 15, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": 35,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 37
+## Log
+* [17] Cannot be dispatched, waiting for a station to be free
+* [15] Completed
+* [16] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 15, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 32,
+        "startedAt": 35,
+        "finishedAt": 37,
+        "writtenAt": 38
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 38
+## Log
+* [17] Cannot be dispatched, waiting for a station to be free
+* [15] Wrote in memory
+* [16] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 16, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": 38,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 39
+## Log
+* [17] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 16, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": 38,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 40
+## Log
+* [18] Cannot be dispatched, waiting for a station to be free
+* [17] Cannot start, it's waiting for Register 10
+* [16] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 16, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 35,
+        "startedAt": 38,
+        "finishedAt": 40,
+        "writtenAt": 41
+    }},
+]
+```
+---
+
+# CICLE 41
+## Log
+* [18] Cannot be dispatched, waiting for a station to be free
+* [17] Cannot start, it's waiting for Register 10
+* [16] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 42
+## Log
+* [18] Dispatched
+* [17] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 17, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": 42,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 43
+## Log
+* [19] Cannot be dispatched, waiting for a station to be free
+* [18] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 17, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": 42,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 44
+## Log
+* [19] Cannot be dispatched, waiting for a station to be free
+* [17] Completed
+* [18] Cannot start, it's waiting for Register 10
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 17, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 39,
+        "startedAt": 42,
+        "finishedAt": 44,
+        "writtenAt": 45
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 45
+## Log
+* [19] Cannot be dispatched, waiting for a station to be free
+* [17] Wrote in memory
+* [18] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 18, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": 45,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 46
+## Log
+* [19] Dispatched
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 18, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": 45,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 47
+## Log
+* [19] Cannot start, it's waiting for Register 10
+* [18] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 6, "busyByInst": 18, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (6)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 42,
+        "startedAt": 45,
+        "finishedAt": 47,
+        "writtenAt": 48
+    }},
+]
+```
+---
+
+# CICLE 48
+## Log
+* [19] Cannot start, it's waiting for Register 10
+* [18] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 49
+## Log
+* [19] Started
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 19, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": 49,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 50
+## Log
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 19, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": 49,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 51
+## Log
+* [19] Completed
+
+## Registers
+```json
+[
+{"id": 10, "busyByStation": 5, "busyByInst": 19, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 46,
+        "startedAt": 49,
+        "finishedAt": 51,
+        "writtenAt": 52
+    }},
+]
+```
+---
+
+# CICLE 52
+## Log
+* [19] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+]
+```
+---
+
+# CICLE 1
+## Log
+* [1] Dispatched
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 1,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 2
+## Log
+* [2] Dispatched
+* [1] Started
+
+## Registers
+```json
+[
+{"id": 1, "busyByStation": 3, "busyByInst": 1, "v": 1},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 3
+## Log
+* [3] Dispatched
+* [2] Cannot start, it's waiting for Register 1
+
+## Registers
+```json
+[
+{"id": 1, "busyByStation": 3, "busyByInst": 1, "v": 1},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 4
+## Log
+* [4] Dispatched
+* [2] Cannot start, it's waiting for Register 1
+* [3] Started
+* [1] Completed
+
+## Registers
+```json
+[
+{"id": 1, "busyByStation": 3, "busyByInst": 1, "v": 0},
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 1,
+        "startedAt": 2,
+        "finishedAt": 4,
+        "writtenAt": 5
+    }},
+]
+```
+---
+
+# CICLE 5
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [2] Cannot start, it's waiting for Register 1
+* [4] Cannot start, it's waiting for Register 3
+* [1] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 6
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [2] Started
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 2, "v": 2},
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": 6,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 7
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 2, "v": 2},
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": 6,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 8
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 2, "v": 2},
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": 6,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 9
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [2] Completed
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 2, "busyByStation": 0, "busyByInst": 2, "v": 0},
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 2,
+        "startedAt": 6,
+        "finishedAt": 9,
+        "writtenAt": 10
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 10
+## Log
+* [5] Cannot be dispatched, waiting for a station to be free
+* [2] Wrote in memory
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 11
+## Log
+* [5] Dispatched
+* [4] Cannot start, it's waiting for Register 3
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 3},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 11,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 12
+## Log
+* [6] Dispatched
+* [5] Started
+* [4] Cannot start, it's waiting for Register 3
+* [3] Completed
+
+## Registers
+```json
+[
+{"id": 3, "busyByStation": 2, "busyByInst": 3, "v": 0},
+{"id": 5, "busyByStation": 0, "busyByInst": 5, "v": 5},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 11,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "MULTIPLIER (2)", "Instruction": {
+        "operation": "MUL",
+        "issuedAt": 3,
+        "startedAt": 4,
+        "finishedAt": 12,
+        "writtenAt": 13
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 13
+## Log
+* [7] Dispatched
+* [4] Cannot start, it's waiting for Register 3
+* [3] Wrote in memory
+* [6] Cannot start, it's waiting for Register 5
+
+## Registers
+```json
+[
+{"id": 5, "busyByStation": 0, "busyByInst": 5, "v": 5},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 11,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 13,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 14
+## Log
+* [4] Started
+* [7] Started
+* [6] Cannot start, it's waiting for Register 5
+
+## Registers
+```json
+[
+{"id": 4, "busyByStation": 1, "busyByInst": 4, "v": 4},
+{"id": 5, "busyByStation": 0, "busyByInst": 5, "v": 5},
+{"id": 31, "busyByStation": 3, "busyByInst": 7, "v": 31},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 11,
+        "startedAt": 12,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": 14,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 13,
+        "startedAt": 14,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 15
+## Log
+* [5] Completed
+* [6] Cannot start, it's waiting for Register 5
+
+## Registers
+```json
+[
+{"id": 4, "busyByStation": 1, "busyByInst": 4, "v": 4},
+{"id": 5, "busyByStation": 0, "busyByInst": 5, "v": 4},
+{"id": 31, "busyByStation": 3, "busyByInst": 7, "v": 31},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (0)", "Instruction": {
+        "operation": "ADD",
+        "issuedAt": 11,
+        "startedAt": 12,
+        "finishedAt": 15,
+        "writtenAt": 16
+    }},
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": 14,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 13,
+        "startedAt": 14,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": -1,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 16
+## Log
+* [5] Wrote in memory
+* [7] Completed
+* [6] Started
+
+## Registers
+```json
+[
+{"id": 4, "busyByStation": 1, "busyByInst": 4, "v": 4},
+{"id": 5, "busyByStation": 5, "busyByInst": 6, "v": 4},
+{"id": 31, "busyByStation": 3, "busyByInst": 7, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": 14,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+    {"type": "LOAD (3)", "Instruction": {
+        "operation": "LW",
+        "issuedAt": 13,
+        "startedAt": 14,
+        "finishedAt": 16,
+        "writtenAt": 17
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": 16,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 17
+## Log
+* [4] Completed
+* [7] Wrote in memory
+
+## Registers
+```json
+[
+{"id": 4, "busyByStation": 1, "busyByInst": 4, "v": 0},
+{"id": 5, "busyByStation": 5, "busyByInst": 6, "v": 4},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "ADDER (1)", "Instruction": {
+        "operation": "SUB",
+        "issuedAt": 4,
+        "startedAt": 14,
+        "finishedAt": 17,
+        "writtenAt": 18
+    }},
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": 16,
+        "finishedAt": -1,
+        "writtenAt": -1
+    }},
+]
+```
+---
+
+# CICLE 18
+## Log
+* [4] Wrote in memory
+* [6] Completed
+
+## Registers
+```json
+[
+{"id": 5, "busyByStation": 5, "busyByInst": 6, "v": 0},
+]
+```
+
+## Stations
+```json
+[
+    {"type": "STORE (5)", "Instruction": {
+        "operation": "SW",
+        "issuedAt": 12,
+        "startedAt": 16,
+        "finishedAt": 18,
+        "writtenAt": 19
+    }},
+]
+```
+---
+
+# CICLE 19
+## Log
+* [6] Wrote in memory
+
+## Registers
+```json
+[
+]
+```
+
+## Stations
+```json
+[
+]
+```
+---
+
