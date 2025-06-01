@@ -61,6 +61,8 @@ Compile (se necessário) e execute o programa com:
    - Despacha instruções para as estações disponíveis.
    - Atualiza o estado das instruções em execução.
    - Gerencia dependências entre registradores e instruções.
+   - Mostra no Terminal quais instruções estão em execução em cada estação
+   - Valores dos registradores 
 
 ## Instruções Suportadas
 
